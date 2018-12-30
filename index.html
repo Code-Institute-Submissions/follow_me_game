@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="XUA-Compatibl-e" content="ie=edge">
+    <title>Follow Me</title>
+
+    <link rel="stylesheet" href="assets/css/styles.css" type="text/css" />
+    
+    <script type="text/javascript" src="assets/js/main.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <h1>Follow Me</h1>
+        <nav>
+
+        </nav>
+    </header>
+    
+    <audio id="sounds" loop= "false" volume = "60">
+    <source src="assets/sounds/dog.wav" id="D" type="audio/wav">
+    <source src="assets/sounds/cow.wav" id="M" type="audio/wav">
+    <source src="assets/sounds/cat.wav" id="C" type="audio/wav">
+    <source src="assets/sounds/pig.wav" id="P" type="audio/wav">
+    <source src="assets/sounds/win.wav" id="W" type="audio/wav">
+    <source src="assets/sounds/end.wav" id="E" type="audio/wav">
+    
+  </audio> 
+
+
+    <main>
+        <div class="container">
+            <div class="section-play">
+                <button class="play">Play</button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="section">
+                <button class="dog control" onclick="playAudio()" type="button"><img class="button-img" src="assets/images/dog.png"></button>
+            </div>
+            <div class="section">
+                <button class="cow control"><img class="button-img" src="assets/images/cow.png"></button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="section-play">
+                <button class="score">Score</button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="section">
+                <button class="cat control"><img class="button-img" src="assets/images/cat.png"></button>
+            </div>
+            <div class="section">
+                <button class="pig control"><img class="button-img" src="assets/images/pig.png"></button>
+            </div>
+        </div>
+        <div class="instructions">
+            <h3>How To Play -</h3>
+            <ol>
+                <li>Press play</li>
+                <li>Watch and listen as the buttons light up randomly.</li>
+                <li>Press the buttons in the same order to move onto the next level. Each level increases in length and difficulty.</li>
+            </ol>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+
+</html>
