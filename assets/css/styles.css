@@ -1,74 +1,153 @@
-header {
-    background-color: #9e45b5;
-    width: 100%;
-    color: #25d0c2;
-    text-align: center;
-    padding: 20px;
-}
-
-main {
-    padding-top: 25px;
-}
-
-
-.button-img {
-    height: 50px;
-    width: 50px;
-}
-
-button {
-    border: solid 1px;
-    border-radius: 15px;
-    width: 100px;
-    height: 100px;
-}
-
-.play {
-    width: 50px;
-    height: 50px;
-    color: #25D0C2;
-    background-color: #9E45B5;
-}
-
-.score {
-    border-radius: 50px;
-    width: 70px;
-    height: 70px;
-    color: #25D0C2;
-    background-color: #9E45B5;
-}
-
-.dog {
-    background-color: red;
-}
-
-.cow {
-    background-color: blue;
-}
-
-.cat {
-    background-color: green;
-}
-
-.pig {
-    background-color: yellow;
+body {
+    background-color: #2b353a;
 }
 
 .container {
-    width: 100%;
+    margin: 0 auto;
     text-align: center;
-    display: flex;
 }
 
-.section {
-    width: 50%;
+.simonBoard {
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 600px;
+    height: 600px;
+    border: solid 5px black;
+    border-radius: 600px;
 }
 
-.section-play {
-    width: 100%;
+.button {
+    margin: 0;
+    float: left;
+    position: relative;
+    width: 290px;
+    height: 290px;
+    border: solid 5px black;
+    z-index: 8;
+}
+
+.green {
+    background-color: green;
+    border-radius: 300px 0 0 0;
+}
+
+.green-active {
+    background-color: darkgreen !important;
+}
+
+.red {
+    background-color: red;
+    border-radius: 0 300px 0 0;
+}
+
+.red-active {
+    background-color: darkred !important;
+}
+
+.yellow {
+    background-color: yellow;
+    border-radius: 0 0 0 300px;
+}
+
+.yellow-active {
+    background-color: #e6d47e !important;
+}
+
+.blue {
+    background-color: blue;
+    border-radius: 0 0 300px 0;
+}
+
+.blue-active {
+    background-color: darkblue !important;
+}
+
+.board-controls {
+    width: 245px;
+    height: 245px;
+    margin-left: 170px;
+    margin-top: 170px;
+    background-color: white;
+    border: solid 10px black;
+    border-radius: 150px;
+    position: absolute;
+    z-index: 10;
+}
+
+.title {
+    margin-top: 37px;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 17px;
+    color: blue;
+}
+
+.inline {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.display {
+    width: 60px;
+    height: 45px;
+    border: solid 1px black;
+    border-radius: 10px;
+    background-color: #342626;
+    color: white;
+    font-size: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.start {
+    background-color: red;
+    margin-left: 0;
+}
+
+.reset {
+    background-color: yellow;
+}
+
+.start,
+.reset {
+    margin: 0;
+    margin-left: 25px;
+    text-align: center;
+    width: 55px;
+    height: 55px;
+    border: solid 2px black;
+    border-radius: 30px;
+    color: black;
+    font-size: 15px;
+    line-height: 55px;
 }
 
 .instructions {
-    width: 100%;
-    color: #25D0C2;
+    display: inline-block;
+    color: white;
+}
+
+.dog-image {
+    margin-top: 80px;
+    width: 100px;
+    position: relative;
+}
+
+.cat-image {
+    margin-top: 64px;
+    width: 138px;
+    position: relative;
+}
+
+.cow-image {
+    margin-top: 80px;
+    width: 115px;
+    position: relative;
+}
+
+.pig-image {
+    margin-top: 80px;
+    width: 105px;
+    position: relative;
 }
