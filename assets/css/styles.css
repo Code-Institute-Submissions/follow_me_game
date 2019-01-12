@@ -11,22 +11,26 @@ h1 {
     text-align: center;
 }
 
+/*------  Main board   -----*/
+
 .board {
     margin: 0 auto;
     margin-top: 50px;
-    width: 600px;
-    height: 600px;
-    border: solid 5px black;
+    width: 300px;
+    height: 300px;
+    border: solid 3px black;
     border-radius: 600px;
 }
+
+/*------  Button styling   -----*/
 
 .button {
     margin: 0;
     float: left;
     position: relative;
-    width: 290px;
-    height: 290px;
-    border: solid 5px black;
+    width: 144px;
+    height: 144px;
+    border: solid 3px black;
     z-index: 8;
 }
 
@@ -66,23 +70,29 @@ h1 {
     background-color: darkblue !important;
 }
 
+
+/*-----     Board Centre   ----*/
+
 .board-controls {
-    width: 245px;
-    height: 245px;
-    margin-left: 170px;
-    margin-top: 170px;
+    width: 123px;
+    height: 123px;
+    margin-left: 85px;
+    margin-top: 85px;
     background-color: white;
-    border: solid 10px black;
+    border: solid 5px black;
     border-radius: 150px;
     position: absolute;
     z-index: 10;
 }
 
+
+/*-----    Board Centre Heading    -----*/
+
 .title {
-    margin-top: 37px;
-    font-size: 26px;
+    margin-top: 15px;
+    font-size: 13px;
     font-weight: bold;
-    margin-bottom: 17px;
+    margin-bottom: 8px;
     color: blue;
 }
 
@@ -91,18 +101,22 @@ h1 {
     vertical-align: middle;
 }
 
+/*-----    Level Display    -----*/
+
 .display {
-    width: 80px;
-    height: 45px;
+    width: 40px;
+    height: 23px;
     border: solid 1px black;
     border-radius: 10px;
     background-color: #342626;
     color: white;
-    font-size: 40px;
+    font-size: 20px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
+
+/*-----    Start and Reset Buttons    -----*/
 
 .start {
     background-color: red;
@@ -114,12 +128,12 @@ h1 {
 .reset {
     margin: 0;
     text-align: center;
-    width: 55px;
-    height: 55px;
+    width: 27px;
+    height: 27px;
     border: solid 2px black;
     border-radius: 30px;
-    font-size: 15px;
-    line-height: 55px;
+    font-size: 7px;
+    line-height: 27px;
 }
 
 .reset {
@@ -128,31 +142,183 @@ h1 {
     color: black;
 }
 
+/*-----    Instructions    -----*/
+
 .instructions {
     display: inline-block;
-    color: white;
+    color: blue;
 }
 
+
+/*-----    Button Images    -----*/
+
 .dog-image {
-    margin-top: 80px;
-    width: 100px;
+    margin-top: 40px;
+    width: 50px;
     position: relative;
 }
 
 .cat-image {
-    margin-top: 64px;
-    width: 138px;
+    margin-top: 32px;
+    width: 69px;
     position: relative;
 }
 
 .cow-image {
-    margin-top: 80px;
-    width: 115px;
+    margin-top: 40px;
+    width: 57px;
     position: relative;
 }
 
 .pig-image {
-    margin-top: 80px;
-    width: 105px;
+    margin-top: 40px;
+    width: 52px;
     position: relative;
+}
+
+/*-------  Tablet  -------*/
+
+@media (min-width: 768px) {
+    /*------  Main board   -----*/
+    .board {
+        width: 450px;
+        height: 450px;
+        border: solid 4px black;
+    }
+
+    /*------  Button styling   -----*/
+    .button {
+        width: 217px;
+        height: 217px;
+        border: solid 4px black;
+    }
+
+    /*-----     Board Centre   ----*/
+    .board-controls {
+        width: 183px;
+        height: 183px;
+        margin-left: 127px;
+        margin-top: 127px;
+         border: solid 7px black;
+    }
+
+    /*-----    Board Centre Heading    -----*/
+    .title {
+        margin-top: 27px;
+        font-size: 19px;
+    }
+
+    /*-----    Level Display    -----*/
+    .display {
+        width: 60px;
+        height: 34px;
+        margin-bottom: 15px;
+        font-size: 30px;
+    }
+
+    /*-----    Start and Reset Buttons    -----*/
+    .start,
+    .reset {
+        width: 41px;
+        height: 41px;
+        border: solid 2px black;
+        font-size: 11px;
+        line-height: 41px;
+    }
+
+    /*-----    Button Images    -----*/
+    .dog-image {
+        margin-top: 60px;
+        width: 75px;
+    }
+
+    .cat-image {
+        margin-top: 48px;
+        width: 103px;
+    }
+
+    .cow-image {
+        margin-top: 60px;
+        width: 86px;
+    }
+
+    .pig-image {
+        margin-top: 75px;
+        width: 79px;
+    }
+}
+
+
+/*------- Desktop  ---------*/
+
+@media (min-width: 1024px) {
+
+    /*------  Main board   -----*/
+    .board {
+        width: 600px;
+        height: 600px;
+        border: solid 5px black;
+    }
+
+    /*------  Button styling   -----*/
+    .button {
+        width: 290px;
+        height: 290px;
+        border: solid 5px black;
+    }
+
+    /*-----     Board Centre   ----*/
+    .board-controls {
+        width: 245px;
+        height: 245px;
+        margin-left: 170px;
+        margin-top: 170px;
+         border: solid 10px black;
+    }
+
+    /*-----    Board Centre Heading    -----*/
+    .title {
+        margin-top: 37px;
+        font-size: 26px;
+    }
+
+    /*-----    Level Display    -----*/
+    .display {
+        width: 80px;
+        height: 45px;
+        margin-bottom: 20px;
+        font-size: 40px;
+    }
+
+    /*-----    Start and Reset Buttons    -----*/
+    .start,
+    .reset {
+        width: 55px;
+        height: 55px;
+        border: solid 2px black;
+        font-size: 15px;
+        line-height: 55px;
+    }
+
+    /*-----    Button Images    -----*/
+    .dog-image {
+        margin-top: 80px;
+        width: 100px;
+    }
+
+    .cat-image {
+        margin-top: 64px;
+        width: 138px;
+    }
+
+    .cow-image {
+        margin-top: 80px;
+        width: 115px;
+    }
+
+    .pig-image {
+        margin-top: 80px;
+        width: 105px;
+    }
+
 }
