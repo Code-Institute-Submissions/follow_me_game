@@ -22,28 +22,28 @@ $(document).ready(function() {
         startSequence();
     })
 
-/*------ User button listener -------*/
+    /*------ User button listener -------*/
     $(".button").click(function() {
         id = $(this).attr("id");
         color = $(this).attr("class").split(" ")[1];
         userSeq.push(id);
         console.log(id + " " + color);
         addClassSound(id, color);
-                        
-/*------ Check user sequence ------*/
+
+        /*------ Check user sequence ------*/
         if (!checkUserSeq()) {
             displayError();
             userSeq = [];
         }
-                   
-/*------ Check for end of sequence ------*/
+
+        /*------ Check for end of sequence ------*/
         if (userSeq.length == gameSeq.length && userSeq.length < NUM_OF_LEVELS) {
             level++;
             userSeq = [];
             startSequence();
         }
-                        
-/*------ Check for winners -------*/
+
+        /*------ Check for winners -------*/
         if (userSeq.length == NUM_OF_LEVELS) {
             $(".display").text("WIN");
             winnerSound();
@@ -76,11 +76,10 @@ function displayError() {
         if (counter == 6) {
             $(".display").text(level);
             clearInterval(myError);
-            userSeq.reset();
-            gameSeq.reset();
-            counter = 0;
             errSound();
             level = 0;
+            gameSeq = [];
+            userSeq = [];
         }
     }, 500);
 }
@@ -135,4 +134,18 @@ function errSound() {
 function winnerSound() {
     var win = new Audio(winSound);
     win.play();
+}
+
+/*------- Reset Button -------*/
+$(document).ready(function() {
+    $(".reset").click(function() {
+        resetGame();
+    })
+})
+
+function resetGame() {
+    console.log("reset game")
+    level = 0;
+    gameSeq = [];
+    userSeq = [];
 }
