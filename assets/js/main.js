@@ -1,4 +1,4 @@
-/* Variables */
+/*------- Variables -------*/
 userSeq = [];
 gameSeq = [];
 const NUM_OF_LEVELS = 6;
@@ -16,13 +16,13 @@ var winSound = [
     "assets/sounds/win.mp3"
 ]
 
-/* Start board sequence */
+/*------- Start board sequence ------*/
 $(document).ready(function() {
     $(".start").click(function() {
         startSequence();
     })
 
-    /* User button listener */
+/*------ User button listener -------*/
     $(".button").click(function() {
         id = $(this).attr("id");
         color = $(this).attr("class").split(" ")[1];
@@ -30,20 +30,20 @@ $(document).ready(function() {
         console.log(id + " " + color);
         addClassSound(id, color);
                         
-        /* Check user sequence */
+/*------ Check user sequence ------*/
         if (!checkUserSeq()) {
             displayError();
             userSeq = [];
         }
                    
-        /* Check for end of sequence */
+/*------ Check for end of sequence ------*/
         if (userSeq.length == gameSeq.length && userSeq.length < NUM_OF_LEVELS) {
             level++;
             userSeq = [];
             startSequence();
         }
                         
-        /* Check for winners */
+/*------ Check for winners -------*/
         if (userSeq.length == NUM_OF_LEVELS) {
             $(".display").text("WIN");
             winnerSound();
@@ -54,7 +54,7 @@ $(document).ready(function() {
     })
 })
 
-/* Check user sequence against game sequence */
+/*------ Check user sequence against game sequence --------*/
 function checkUserSeq() {
     for (var i = 0; i < userSeq.length; i++) {
         if (userSeq[i] != gameSeq[i]) {
@@ -64,7 +64,7 @@ function checkUserSeq() {
     return true;
 }
 
-/* Display error message */
+/*------- Display error message -------*/
 function displayError() {
     console.log("error");
     var counter = 0;
@@ -85,7 +85,7 @@ function displayError() {
     }, 500);
 }
 
-/* Game Sequence*/
+/*------- Game Sequence --------*/
 function startSequence() {
     console.log(level);
     $(".display").text(level);
@@ -103,13 +103,13 @@ function startSequence() {
     }, 1500)
 }
 
-/* Generate random number */
+/*-------- Generate random number -------*/
 function getRandomNum() {
     var random = Math.floor(Math.random() * 4);
     gameSeq.push(random);
 }
 
-/* Add temporary class and sound */
+/*-------- Add temporary class and sound -------*/
 function addClassSound(id, color) {
     $("#" + id).addClass(color + "-active");
     playSound(id);
@@ -118,20 +118,20 @@ function addClassSound(id, color) {
     }, 500);
 }
 
-/* Play board sound */
+/*------- Play board sound --------*/
 function playSound(id) {
     var sound = new Audio(boardSound[id]);
     sound.volume = 1.0;
     sound.play();
 }
 
-/* Play error sound */
+/*-------- Play error sound -------*/
 function errSound() {
     var wrong = new Audio(errorSound);
     wrong.play();
 }
 
-/* Play winner sound */
+/*------- Play winner sound -------*/
 function winnerSound() {
     var win = new Audio(winSound);
     win.play();
