@@ -1,25 +1,18 @@
-/*------- Variables -------*/
+/*------- Global Variables -------*/
 userSeq = [];
 gameSeq = [];
-const NUM_OF_LEVELS = 6;
+
 var id, color, level = 0;
-var boardSound = [
-    "assets/sounds/dog.mp3",
-    "assets/sounds/cat.mp3",
-    "assets/sounds/cow.mp3",
-    "assets/sounds/pig.mp3"
-]
-var errorSound = [
-    "assets/sounds/end.mp3"
-]
-var winSound = [
-    "assets/sounds/win.mp3"
-]
 
 /*------- Start board sequence ------*/
 $(document).ready(function() {
     $(".start").click(function() {
         startSequence();
+    })
+
+    /*------- Reset Button -------*/
+    $(".reset").click(function() {
+        resetGame();
     })
 
     /*------ User button listener -------*/
@@ -37,6 +30,7 @@ $(document).ready(function() {
         }
 
         /*------ Check for end of sequence ------*/
+        const NUM_OF_LEVELS = 6;
         if (userSeq.length == gameSeq.length && userSeq.length < NUM_OF_LEVELS) {
             level++;
             userSeq = [];
@@ -44,6 +38,7 @@ $(document).ready(function() {
         }
 
         /*------ Check for winners -------*/
+
         if (userSeq.length == NUM_OF_LEVELS) {
             $(".display").text("WIN");
             winnerSound();
@@ -51,8 +46,8 @@ $(document).ready(function() {
             gameSeq = [];
             userSeq = [];
         }
-    })
-})
+    });
+});
 
 /*------ Check user sequence against game sequence --------*/
 function checkUserSeq() {
@@ -89,13 +84,13 @@ function startSequence() {
     console.log(level);
     $(".display").text(level);
     getRandomNum();
-    var i = 0
+    var i = 0;
     var myInterval = setInterval(function() {
         id = gameSeq[i];
         color = $("#" + id).attr("class").split(" ")[1];
         console.log(id + " " + color);
         addClassSound(id, color);
-        i++
+        i++;
         if (i == gameSeq.length) {
             clearInterval(myInterval);
         }
@@ -119,32 +114,34 @@ function addClassSound(id, color) {
 
 /*------- Play board sound --------*/
 function playSound(id) {
+    var boardSound = [
+        "assets/sounds/dog.mp3",
+        "assets/sounds/cat.mp3",
+        "assets/sounds/cow.mp3",
+        "assets/sounds/pig.mp3"
+    ];
     var sound = new Audio(boardSound[id]);
-    sound.volume = 1.0;
     sound.play();
 }
 
 /*-------- Play error sound -------*/
 function errSound() {
+    const errorSound = "assets/sounds/end.mp3";
     var wrong = new Audio(errorSound);
     wrong.play();
 }
 
 /*------- Play winner sound -------*/
 function winnerSound() {
+    const winSound = "assets/sounds/win.mp3";
     var win = new Audio(winSound);
     win.play();
 }
 
 /*------- Reset Button -------*/
-$(document).ready(function() {
-    $(".reset").click(function() {
-        resetGame();
-    })
-})
 
 function resetGame() {
-    console.log("reset game")
+    console.log("reset game");
     level = 0;
     gameSeq = [];
     userSeq = [];
