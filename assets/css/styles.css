@@ -12,10 +12,10 @@ h1 {
 }
 
 /*------  Main board   -----*/
-
 .board {
     margin: 0 auto;
     margin-top: 50px;
+    margin-bottom: 50px;
     width: 300px;
     height: 300px;
     border: solid 3px black;
@@ -23,7 +23,6 @@ h1 {
 }
 
 /*------  Button styling   -----*/
-
 .button {
     margin: 0;
     float: left;
@@ -76,7 +75,6 @@ h1 {
 
 
 /*-----     Board Centre   ----*/
-
 .board-controls {
     width: 123px;
     height: 123px;
@@ -91,7 +89,6 @@ h1 {
 
 
 /*-----    Board Centre Heading    -----*/
-
 .title {
     margin-top: 15px;
     font-size: 13px;
@@ -106,7 +103,6 @@ h1 {
 }
 
 /*-----    Level Display    -----*/
-
 .display {
     width: 40px;
     height: 23px;
@@ -121,7 +117,6 @@ h1 {
 }
 
 /*-----    Start and Reset Buttons    -----*/
-
 .start {
     background-color: red;
     margin-left: 0;
@@ -152,15 +147,13 @@ h1 {
 }
 
 /*-----    Instructions    -----*/
-
 .instructions {
-    display: inline-block;
     color: blue;
+    text-align: center;
 }
 
 
 /*-----    Button Images    -----*/
-
 .dog-image {
     margin-top: 40px;
     width: 50px;
@@ -186,7 +179,6 @@ h1 {
 }
 
 /*-------  Tablet  -------*/
-
 @media (min-width: 768px) {
     /*------  Main board   -----*/
     .board {
@@ -208,7 +200,7 @@ h1 {
         height: 183px;
         margin-left: 127px;
         margin-top: 127px;
-         border: solid 7px black;
+        border: solid 7px black;
     }
 
     /*-----    Board Centre Heading    -----*/
@@ -259,7 +251,6 @@ h1 {
 
 
 /*------- Desktop  ---------*/
-
 @media (min-width: 1024px) {
 
     /*------  Main board   -----*/
@@ -282,7 +273,7 @@ h1 {
         height: 245px;
         margin-left: 170px;
         margin-top: 170px;
-         border: solid 10px black;
+        border: solid 10px black;
     }
 
     /*-----    Board Centre Heading    -----*/

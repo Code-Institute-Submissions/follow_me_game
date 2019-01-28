@@ -38,7 +38,6 @@ $(document).ready(function() {
         }
 
         /*------ Check for winners -------*/
-
         if (userSeq.length == NUM_OF_LEVELS) {
             $(".display").text("WIN");
             winnerSound();
@@ -51,7 +50,7 @@ $(document).ready(function() {
 
 /*------ Check user sequence against game sequence --------*/
 function checkUserSeq() {
-    for (var i = 0; i < userSeq.length; i++) {
+    for (let i = 0; i < userSeq.length; i++) {
         if (userSeq[i] != gameSeq[i]) {
             return false;
         }
@@ -62,8 +61,8 @@ function checkUserSeq() {
 /*------- Display error message -------*/
 function displayError() {
     console.log("error");
-    var counter = 0;
-    var myError = setInterval(function() {
+    let counter = 0;
+    let myError = setInterval(function() {
         $(".display").text("XX");
         counter++;
         level = 0;
@@ -84,8 +83,8 @@ function startSequence() {
     console.log(level);
     $(".display").text(level);
     getRandomNum();
-    var i = 0;
-    var myInterval = setInterval(function() {
+    let i = 0;
+    let myInterval = setInterval(function() {
         id = gameSeq[i];
         color = $("#" + id).attr("class").split(" ")[1];
         console.log(id + " " + color);
@@ -99,7 +98,7 @@ function startSequence() {
 
 /*-------- Generate random number -------*/
 function getRandomNum() {
-    var random = Math.floor(Math.random() * 4);
+    let random = Math.floor(Math.random() * 4);
     gameSeq.push(random);
 }
 
@@ -114,32 +113,31 @@ function addClassSound(id, color) {
 
 /*------- Play board sound --------*/
 function playSound(id) {
-    var boardSound = [
+    let boardSound = [
         "assets/sounds/dog.mp3",
         "assets/sounds/cat.mp3",
         "assets/sounds/cow.mp3",
         "assets/sounds/pig.mp3"
     ];
-    var sound = new Audio(boardSound[id]);
+    let sound = new Audio(boardSound[id]);
     sound.play();
 }
 
 /*-------- Play error sound -------*/
 function errSound() {
     const errorSound = "assets/sounds/end.mp3";
-    var wrong = new Audio(errorSound);
+    let wrong = new Audio(errorSound);
     wrong.play();
 }
 
 /*------- Play winner sound -------*/
 function winnerSound() {
     const winSound = "assets/sounds/win.mp3";
-    var win = new Audio(winSound);
+    let win = new Audio(winSound);
     win.play();
 }
 
 /*------- Reset Button -------*/
-
 function resetGame() {
     console.log("reset game");
     level = 0;
