@@ -1,31 +1,31 @@
 # Follow Me Game
 
-The focus of this project is to create a memory game for children to play. My aim is to build this using HTML, CSS, JavaScript and jQuery.
+The focus of this project is to create a memory game for children to play. My aim is to build this game using the skills learnt using HTML, CSS, JavaScript and jQuery.
 
 
 ## UX
 
-This website is to be a memory game aimed at children to play.
+This website is a memory game aimed at children to play on all mobile and desktop devices.
 
 ### User Stories:
 
-A game to test the memory of the user. The level of difficulty increases as the user gets the sequence correct and the level increases.
+The user plays this game to test their memory. They must follow a sequence in the correct order to progress to the next level. The level of difficulty increases as the user gets the sequence correct.
 
-### Ux Design: 
+### UX Design: 
 
-Below is the link for the wire frames I used during the project using Adobe XD
+Below is the link for the wireframes I used during the project using Adobe XD
 
 https://xd.adobe.com/view/435d155a-7097-4ba7-7aa7-d3c61a691028-356c/
 
 Whilst programming the first wireframe I realised that it was not very appealing so I changed my design to the second wireframe.
 
-![wireframe 1](/wireframes/follow_me_version1.jpg)
-![wireframe 2](/wireframes/follow_me_version2.jpg)
+![wireframe 1](/assets/wireframes/follow_me_version1.jpg)
+![wireframe 2](assets/wireframes/follow_me_version2.jpg)
 
 
 ## Features
 
-The start button starts the sequence of the game, starting level one with just one button to be pressed. As the user gets the correct sequence another button is included in the sequence increasing the difficulty of the level. Each button has a picture of an animal and as the button is activated the sound of that animal is played. 
+The start button starts the sequence of the game, starting level one with just one pad to be pressed. As the user gets the correct sequence another pad is included in the sequence increasing the difficulty of the level. Each pad has a picture of an animal and as the pad is activated the sound of that animal is played. I have included a reset button to the centre of the board so the game and levels can be reset. 
 
 ### Existing features
 
@@ -33,18 +33,16 @@ There are six levels which need to be replecated correctly for the user to win.
 
 ### Feature Left to Implement
 
-• Add and program a reset button
-• Add more levels
+More levels can be added if required at a later date or even a timed game with a high score.
 
 ## Technologies Used
 
 Throughout this project I have used:
 
-• HTML5<br>
-• CSS<br>
-• JavaScript<br>
-• jQuery
-
+• HTML5 to build the content of the website<br>
+• CSS to sytle my HTML<br>
+• JavaScript to program the functionality of the board<br>
+• jQuery library from https://jquery.com to simplify DOM manipulation
 
 
 ## Testing
@@ -56,8 +54,11 @@ I have tested the functionality of my code on<br>
 • Opera<br>
 • Mobile browsers, including Galaxy S5, Kindle Fire HDX, Laptop, Nexus 10, iPhone 4, iPhone 6, iPhone X, iPad and iPad Pro
 
-I validated html my code using https://validator.w3.org and corrected any errors such as 
-I have used jasmine to test my JavaScript.
+As the game is played on each media the images and game board increases or decreases respectively.
+
+I validated html my code using https://validator.w3.org and corrected any errors such as image alt tags. 
+
+I believe that all of the user goals have been acheived.
 
 ## Deployment
 
