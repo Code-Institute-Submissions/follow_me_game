@@ -2,7 +2,7 @@
 userSeq = [];
 gameSeq = [];
 
-var id, color, level = 0;
+let id, color, level = 0;
 
 /*------- Start board sequence ------*/
 $(document).ready(function() {
@@ -20,7 +20,6 @@ $(document).ready(function() {
         id = $(this).attr("id");
         color = $(this).attr("class").split(" ")[1];
         userSeq.push(id);
-        console.log(id + " " + color);
         addClassSound(id, color);
 
         /*------ Check user sequence ------*/
@@ -60,7 +59,6 @@ function checkUserSeq() {
 
 /*------- Display error message -------*/
 function displayError() {
-    console.log("error");
     let counter = 0;
     let myError = setInterval(function() {
         $(".display").text("XX");
@@ -80,14 +78,12 @@ function displayError() {
 
 /*------- Game Sequence --------*/
 function startSequence() {
-    console.log(level);
     $(".display").text(level);
     getRandomNum();
     let i = 0;
     let myInterval = setInterval(function() {
         id = gameSeq[i];
         color = $("#" + id).attr("class").split(" ")[1];
-        console.log(id + " " + color);
         addClassSound(id, color);
         i++;
         if (i == gameSeq.length) {
