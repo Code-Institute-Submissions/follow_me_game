@@ -8,12 +8,12 @@ let id, color, level = 0;
 $(document).ready(function() {
     $(".start").click(function() {
         startSequence();
-    })
+    });
 
     /*------- Reset Button -------*/
     $(".reset").click(function() {
         resetGame();
-    })
+    });
 
     /*------ User button listener -------*/
     $(".button").click(function() {
