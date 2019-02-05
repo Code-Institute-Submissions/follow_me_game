@@ -56,7 +56,9 @@ I have tested the functionality of my code on<br>
 
 As the game is played on each media the images and game board increases or decreases respectively.
 
-I validated html my code using https://validator.w3.org and corrected any errors such as image alt tags. 
+I validated html my code using https://validator.w3.org and corrected any errors such as image alt tags.
+
+I passed my JavaScript through a linter, www.jshint.com to check there are no major issues.
 
 I believe that all of the user goals have been acheived.
 
